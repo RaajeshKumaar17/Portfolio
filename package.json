@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "https://RaajeshKumaar17.github.io/Portfolio",
   "dependencies": {
     "cra-template": "1.2.0",
     "framer-motion": "^12.4.2",

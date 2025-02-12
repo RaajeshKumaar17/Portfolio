@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { HashRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,6 +13,7 @@ function App() {
     <Router>
       <div className="container">
         <Navbar />
+        <AutoRedirect /> {/* Place AutoRedirect here */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
@@ -23,6 +24,19 @@ function App() {
       </div>
     </Router>
   );
+}
+
+// Separate AutoRedirect component inside Router
+function AutoRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.location.pathname === "/Portfolio") {
+      navigate("/"); // Redirect to home page
+    }
+  }, [navigate]);
+
+  return null;
 }
 
 export default App;

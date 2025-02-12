@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import "../styles.css";
-import profileImage from "../assets/profile.jpg"; 
+import profileImage from "../assets/profile.jpg";
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
           <p>
             Passionate about building scalable web applications with React, Node.js, Express, and MongoDB.
           </p>
-          <a href="/projects" className="cta-button">View My Work</a>
+        
+          <Link to="/projects" className="cta-button">View My Work</Link>
         </div>
       </div>
     </div>

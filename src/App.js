@@ -10,7 +10,7 @@ import "./styles.css";
 
 function App() {
   return (
-    <Router> {/* Use HashRouter */}
+    <Router> 
       <div className="container">
         <Navbar />
         <Routes>
